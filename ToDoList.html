@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--모바일 태그-->
+  <title>준똘똘의 메모장</title>
+  <!-- 외부 CSS 연결 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 전체를 감싸는 컨테이너 -->
+  <div class="todo-container">
+    <!-- 제목 -->
+    <h1>나의 개인 메모장</h1>
+    
+    <!-- 할 일 입력 영역 (input + button) -->
+    <div class="input-section">
+      <!-- 텍스트 입력창 -->
+      <input type="text" id="todo-input" placeholder="할 일을 입력하세요" />
+      <!-- 할 일 추가 버튼 -->
+      <button id="add-button">추가</button>
+    </div>
+
+
+    <!-- 순서 있는 리스트 -->
+    <ol>
+      <li>HTML 구조 만들기</li>
+      <li>CSS로 스타일 적용하기</li>
+      <li>JavaScript 실습/공부하기</li>
+    </ol>
+
+    <!-- 순서 없는 리스트 -->
+    <ul id="메모장">
+        <li>두산 베어스 한국시리즈 우승 연도</li>
+        <li>1982년</li>
+        <li>1995년</li>
+        <li>2001년</li>
+        <li>2015년</li>
+        <li>2016년</li>
+        <li>2019년</li>
+        <li>2025년(희망사항)</li>
+    </ul>
+    <!-- 유튜브 영상 임베드 (예: 할 일 앱 사용법 안내 영상) -->
+<div class="video-wrapper">
+  <iframe src="https://www.youtube.com/embed/kVbPz3j0EO4"
+          title="ToDo 사용법"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
+
+ <!-- allow = 부가기능 허용 -->
+    <!-- 하이퍼링크 (href 속성 사용) -->
+    <div class="links">
+      <p>
+        더 많은 정보는는
+        <a href="https://blog.naver.com/junetoltol" target="_blank">
+            <strong>준똘똘의 블로그</strong>
+        </a>
+        에서 확인해보세요.
+      </p>
+        <form action="/submit" method="POST">
+        <label for="name">아이디:</label>
+            <input type="text" id="name" name="username"><br><br>
+
+        <label for="pw">비밀번호:</label>
+            <input type="password" id="pw" name="userpw"><br><br>
+
+        <label>비밀댓글:</label>
+            <input type="radio" name="YesNo" value="Y"> Y
+            <input type="radio" name="YesNo" value="No"> N<br><br>
+
+        <label>공감:</label>
+            <input type="checkbox" name="good" value="recommand"> 좋아요
+            <input type="checkbox" name="good" value="like"> 추천
+            <input type="checkbox" name="bad" value="sad"> 싫어요<br><br>
+        
+        <label for="comment">댓글을 남겨보세요:</label><br />
+            <textarea id="comment" name="comment" rows="5" cols="40" placeholder="여기에 댓글을 입력하세요..."></textarea><br />
+            <button type="submit">댓글 작성</button>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
